@@ -5,7 +5,7 @@ const { karyawan } = require('../controllers');
 
 function AuthenticateAccessToken(req,res,next){
     const authHeader = req.headers['Authorization'];
-    const token = authHeader && authHeader.split(' ')[2];
+    const token = authHeader && authHeader.split(' ')[1];
     console.log(process.env.ACCESS_TOKEN_SECRET);
     console.log(token);
     
